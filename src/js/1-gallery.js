@@ -76,10 +76,10 @@ function createMarkup(arr) {
     .map(
       image =>
         `<li class="gallery-item">
-          <a class="gallery-link" href="${image.original} ">
+          <a class="gallery-link" href="${image.original}">
            <img
              class="gallery-image"
-             src="${image.preview}" 
+             src="${image.preview}"
              alt="${image.description}"
             />
           </a>
@@ -88,9 +88,7 @@ function createMarkup(arr) {
     .join('');
 }
 
-const lightbox = new SimpleLightbox('.gallery a', {
-  overlayOpacity: 0.8,
+const lightbox = new SimpleLightbox('.gallery-item a', {
   captionsData: 'alt',
   captionDelay: 250,
-  captionClass: 'text-center',
 });
