@@ -1,4 +1,6 @@
 const feedbackForm = document.querySelector('.feedback-form');
+const labelEmail = feedbackForm.querySelector('label');
+labelEmail.classList.add('labelEmail');
 const email = feedbackForm.querySelector('input[type="email"]');
 const message = feedbackForm.querySelector('textarea[name="message"]');
 const formKey = 'feedback-form-state';
