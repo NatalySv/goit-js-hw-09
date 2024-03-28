@@ -11,8 +11,8 @@ backLocalstorage();
 
 function onInputTextarea(event) {
   const infoFromForm = {
-    email: email.value,
-    message: message.value,
+    email: email.value.trim(),
+    message: message.value.trim(),
   };
 
   localStorage.setItem(formKey, JSON.stringify(infoFromForm));
@@ -29,7 +29,7 @@ function backLocalstorage() {
 function handleSubmit(event) {
   event.preventDefault();
 
-  if (!email.value || !message.value) {
+  if (!email.value.trim() || !message.value.trim()) {
     alert('All form fields must be filled in');
   } else {
     console.log(
